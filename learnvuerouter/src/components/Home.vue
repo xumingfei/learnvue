@@ -14,9 +14,19 @@
     name: "Home",
     data() {
       return {
-        message:'你好啊'
+        message:'你好啊',
+        path:'/home/news'
       }
     },
+    activated() {
+      console.log('actived');
+      this.$router.push(this.path)
+    },
+    deactivated() {
+      console.log(this.$route.path);
+      console.log('deactivated');
+      this.path = this.$route.path;
+    }
     // created() {
     //   console.log('created');
     //   document.title="首页"
