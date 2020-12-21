@@ -19,24 +19,36 @@
       }
     },
     activated() {
-      console.log('actived');
-      this.$router.push(this.path)
+      console.log('activated');
+      // this.$router.push(this.path)
     },
     deactivated() {
-      console.log(this.$route.path);
+      // console.log(this.$route.path);
       console.log('deactivated');
-      this.path = this.$route.path;
-    }
+      // this.path = this.$route.path;
+    },
     // created() {
-    //   console.log('created');
+    //   console.log('home created');
     //   document.title="首页"
     // },
-   /* mounted() {
-      console.log('mounted');
-    },
-    updated() {
-      console.log('updated');
-    }*/
+    // destroyed() {
+    //   console.log('home destroyed');
+    // },
+    // 组件内导航守卫，页面跳转时记住之前页面地址。
+    // beforeRouteLeave (to, from, next){
+    //   console.log(this.$route.path);
+    //   this.path = this.$route.path;
+    //   next();
+    // },
+    // beforeRouteUpdate: (to, from, next) => {
+    //   console.log('beforeRouteUpdate');
+    // }
+    /* mounted() {
+       console.log('mounted');
+     },
+     updated() {
+       console.log('updated');
+     }*/
   }
 </script>
 
